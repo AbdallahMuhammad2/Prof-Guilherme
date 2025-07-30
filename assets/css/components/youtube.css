@@ -82,7 +82,7 @@
   height: 80%;
   background: radial-gradient(
     ellipse at center,
-    rgba(217, 75, 135, 0.25),
+    rgba(225, 29, 72, 0.2),
     transparent 70%
   );
   opacity: 0.6;
@@ -100,7 +100,7 @@
   height: 60%;
   background: radial-gradient(
     ellipse at center,
-    rgba(247, 188, 108, 0.15),
+    rgba(99, 102, 241, 0.15),
     transparent 70%
   );
   opacity: 0.7;
@@ -185,7 +185,7 @@
   height: 4px;
   background: linear-gradient(90deg, #e11d48, #f43f5e);
   border-radius: 4px;
-  box-shadow: 0 5px 15px rgba(217, 75, 135, 0.5);
+  box-shadow: 0 5px 15px rgba(225, 29, 72, 0.5);
 }
 
 /* Stylish description text */
@@ -212,10 +212,10 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #fff;
-  background: var(--primary-gradient);
+  background: linear-gradient(135deg, #f43f5e, #e11d48);
   border-radius: 50px;
   box-shadow: 
-    0 10px 30px rgba(217, 75, 135, 0.5),
+    0 10px 30px rgba(225, 29, 72, 0.5),
     0 5px 15px rgba(0, 0, 0, 0.2),
     0 0 0 2px rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -274,10 +274,10 @@
 #youtube .btn-danger:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 
-    0 15px 35px rgba(217, 75, 135, 0.6),
+    0 15px 35px rgba(225, 29, 72, 0.6),
     0 8px 20px rgba(0, 0, 0, 0.3),
     0 0 0 2px rgba(255, 255, 255, 0.15);
-  background: var(--primary-gradient);
+  background: linear-gradient(135deg, #f43f5e, #be123c);
 }
 
 #youtube .btn-danger:hover i {
@@ -287,7 +287,7 @@
 #youtube .btn-danger:active {
   transform: translateY(-2px);
   box-shadow: 
-    0 8px 20px rgba(217, 75, 135, 0.4),
+    0 8px 20px rgba(225, 29, 72, 0.4),
     0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -533,7 +533,7 @@
   /* Garantir que o botão se destaque melhor em telas pequenas */
   #youtube .btn-danger {
     box-shadow: 
-      0 10px 25px rgba(217, 75, 135, 0.5),
+      0 10px 25px rgba(225, 29, 72, 0.5),
       0 5px 15px rgba(0, 0, 0, 0.3);
   }
 }

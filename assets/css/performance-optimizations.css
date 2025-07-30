@@ -1,0 +1,301 @@
+/* ===== OTIMIZAÇÕES DE PERFORMANCE ===== */
+
+/* Correção para position: fixed */
+html,
+body {
+  transform: none !important;
+  perspective: none !important;
+}
+
+/* Desabilitar animações pesadas em dispositivos com performance limitada */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Otimizações gerais para melhor performance */
+* {
+  /* Usar GPU para transformações */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Otimizar elementos com will-change */
+.hero-section,
+.course-card-premium,
+.footer-light,
+.animated-gradients,
+.moving-shapes,
+.graphic-element {
+  will-change: transform, opacity;
+}
+
+/* Reduzir blur pesado */
+.footer-light,
+.light-atmosphere-1,
+.light-atmosphere-2,
+.glow-effect,
+.shape {
+  filter: blur(20px) !important; /* Reduzido de 80px+ para 20px */
+}
+
+/* Simplificar animações complexas */
+@keyframes optimizedFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes optimizedPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Substituir animações pesadas por versões otimizadas */
+.floatAndGlow,
+.atmosphereFloat,
+.shapeFloat,
+.pulseLight,
+.cardAura {
+  animation: optimizedFloat 8s ease-in-out infinite !important;
+}
+
+/* Remover backdrop-filter em elementos múltiplos */
+.course-card-premium .card-inner,
+.floating-element,
+.pricing-showcase,
+.footer-copyright,
+.footer-links-bottom {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Otimizar gradientes complexos */
+.animated-gradients::before,
+.animated-gradients::after,
+.course-card-premium::before,
+.course-card-premium::after {
+  background: rgba(217, 75, 135, 0.1) !important;
+  filter: none !important;
+}
+
+/* Reduzir box-shadows múltiplas */
+.course-card-premium,
+.card-inner,
+.action-button {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Simplificar text-shadow múltiplo */
+.graphic-element,
+.hero-title,
+.price-current {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Otimizar elementos com transform 3D */
+.card-inner,
+.course-price,
+.graphic-element {
+  transform-style: flat !important;
+  perspective: none !important;
+}
+
+/* Reduzir animações de partículas */
+.particle,
+.shape-1,
+.shape-2,
+.shape-3 {
+  animation-duration: 20s !important;
+  animation-timing-function: linear !important;
+}
+
+/* Otimizar scroll performance */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* Otimizar imagens */
+img {
+  image-rendering: auto;
+  object-fit: cover;
+}
+
+/* Otimizar elementos fixed/sticky */
+.navbar,
+.footer {
+  contain: layout style paint;
+}
+
+/* Reduzir repaints em hover */
+.course-card-premium:hover,
+.social-icon:hover,
+.cta-button:hover {
+  transform: translateY(-2px) !important;
+  transition: transform 0.2s ease !important;
+}
+
+/* Simplificar efeitos de brilho */
+.borderGlow,
+.priceGlow,
+.discountShine,
+.glareEffect {
+  animation: optimizedPulse 3s ease-in-out infinite !important;
+}
+
+/* Otimizar elementos com position absolute múltiplos */
+.hero-section::before,
+.hero-section::after,
+.courses-section::before,
+.footer-bg {
+  display: none !important;
+}
+
+/* Performance para mobile */
+@media (max-width: 768px) {
+  /* Desabilitar animações em mobile */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Simplificar backgrounds */
+  .hero-section {
+    background: linear-gradient(145deg, #0b1121, #1d293d) !important;
+  }
+  
+  /* Remover efeitos pesados */
+  .light-atmosphere-1,
+  .light-atmosphere-2,
+  .footer-light,
+  .moving-shapes {
+    display: none !important;
+  }
+  
+  /* Otimizar cards */
+  .course-card-premium {
+    transform: none !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+  }
+}
+
+/* Otimizações específicas para scroll */
+.hero-section,
+.courses-section,
+.about-section,
+.testimonials-section,
+footer {
+  contain: layout;
+  isolation: isolate;
+}
+
+/* Reduzir composite layers */
+.graphic-element,
+.particle,
+.floating-element {
+  will-change: auto !important;
+}
+
+/* Otimizar fonts - aplicado via Google Fonts */
+/* font-display: swap já aplicado na URL do Google Fonts */
+
+/* Critical CSS inline hint */
+.hero-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 100vh;
+}
+
+.courses-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
+}
+
+/* ===== OTIMIZAÇÕES ULTRA-AGRESSIVAS ===== */
+
+/* Desabilitar todos os filtros blur pesados */
+.light-atmosphere-1,
+.light-atmosphere-2,
+.footer-light,
+.img-glow,
+.light-ray-1,
+.light-ray-2 {
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Simplificar drasticamente box-shadows */
+.professor-img-container,
+.about-text-container,
+.course-card,
+.testimonial-card {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Remover transforms 3D complexos */
+.professor-img-wrapper,
+.img-primary,
+.panel-1,
+.panel-2 {
+  transform: none !important;
+  transform-style: flat !important;
+  perspective: none !important;
+}
+
+/* Desabilitar animações infinitas pesadas */
+.floating-symbol,
+.floating-particle,
+.light-atmosphere-1,
+.light-atmosphere-2 {
+  animation: none !important;
+}
+
+/* Otimizar GPU layers apenas onde necessário */
+.hero-section,
+.about-section,
+.courses-section {
+  will-change: auto !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduzir complexidade de gradientes */
+.hero-section::before,
+.about-section::before,
+.footer::before {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* Desabilitar mix-blend-mode pesado */
+* {
+  mix-blend-mode: normal !important;
+}
+
+/* Otimizar para dispositivos de baixa performance */
+@media (max-device-width: 768px) and (orientation: portrait) {
+  /* Remover todos os efeitos visuais em mobile portrait */
+  * {
+    filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Manter apenas transições básicas para UX */
+  a, button, .btn {
+    transition: opacity 0.2s ease !important;
+  }
+}

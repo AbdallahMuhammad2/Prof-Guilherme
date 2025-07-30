@@ -1,18 +1,15 @@
 @import url('../variables.css');
 
-/* ===== SEÇÃO DE DEPOIMENTOS FENOMENAL ===== */
+/* ===== SEÇÃO DE DEPOIMENTOS 3D PREMIUM ===== */
 #testimonials {
-  padding: 8rem 0;
+  padding: 150px 0 120px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, 
-    var(--light-pink) 0%, 
-    var(--light-yellow) 50%, 
-    var(--light-pink) 100%);
+  background: linear-gradient(125deg, #0f172a 0%, #1e293b 100%);
   perspective: 1000px;
 }
 
-/* Background dinâmico com cores da marca */
+/* Background dinâmico com partículas flutuantes */
 #testimonials::before {
   content: "";
   position: absolute;
@@ -21,10 +18,11 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(217, 75, 135, 0.15), transparent 60%),
-    radial-gradient(circle at 80% 80%, rgba(247, 188, 108, 0.15), transparent 60%),
-    radial-gradient(circle at 50% 50%, rgba(247, 219, 231, 0.1), transparent 70%);
-  animation: floatBg 20s ease-in-out infinite;
+    radial-gradient(circle at 85% 15%, rgba(217, 75, 135, 0.2), transparent 50%),
+    radial-gradient(circle at 15% 85%, rgba(236, 72, 153, 0.2), transparent 50%);
+  filter: blur(80px);
+  opacity: 0.8;
+  animation: pulseBg 15s infinite alternate;
   z-index: 1;
 }
 
@@ -42,19 +40,9 @@
   z-index: 2;
 }
 
-@keyframes floatBg {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg);
-    opacity: 1;
-  }
-  33% { 
-    transform: translateY(-20px) rotate(1deg);
-    opacity: 0.8;
-  }
-  66% { 
-    transform: translateY(10px) rotate(-1deg);
-    opacity: 0.9;
-  }
+@keyframes pulseBg {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.6; }
 }
 
 /* Título e texto de introdução */
@@ -97,7 +85,7 @@
 }
 
 #testimonials p {
-  color: var(--text-primary);
+  color: rgba(241, 245, 249, 0.8);
   font-size: 1.2rem;
   max-width: 700px;
   margin: 0 auto;
@@ -128,33 +116,25 @@
 
 .testimonial-card {
   position: relative;
-  min-width: 350px;
+  min-width: 300px;
   width: 100%;
-  height: 400px;
+  height: 350px;
   scroll-snap-align: center;
   transform-style: preserve-3d;
-  transition: all var(--transition-slow);
-  opacity: 0.8;
+  transition: all 0.5s ease;
+  opacity: 0.7;
   flex: 0 0 auto;
-  margin: 0 1rem;
-  border-radius: var(--radius-2xl);
-  overflow: hidden;
+  margin: 0 5px;
 }
 
 .testimonial-card.active {
   opacity: 1;
-  transform: scale(1.08) translateY(-10px);
-  box-shadow: 
-    0 30px 80px rgba(217, 75, 135, 0.3),
-    0 15px 40px rgba(247, 188, 108, 0.2);
+  transform: scale(1.05);
 }
 
 .testimonial-card:hover {
-  transform: translateY(-20px) scale(1.02);
-  box-shadow: 
-    0 40px 100px rgba(217, 75, 135, 0.25),
-    0 20px 60px rgba(247, 188, 108, 0.15),
-    0 0 0 1px rgba(217, 75, 135, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial-card.flipped {
@@ -169,28 +149,27 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: var(--radius-2xl);
+  border-radius: 20px;
   overflow: hidden;
-  padding: 2rem;
-  box-shadow: var(--shadow-strong);
-  border: 1px solid rgba(217, 75, 135, 0.1);
+  padding: 25px;
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-front {
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.95) 0%, 
-    rgba(247, 219, 231, 0.9) 100%);
-  backdrop-filter: blur(20px);
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
   transform-style: preserve-3d;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .card-back {
-  background: var(--primary-gradient);
-  backdrop-filter: blur(20px);
+  background: linear-gradient(145deg, rgba(217, 75, 135, 0.8), rgba(236, 72, 153, 0.8));
+  backdrop-filter: blur(12px);
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
@@ -198,7 +177,6 @@
   align-items: center;
   text-align: center;
   z-index: 1;
-  color: var(--white);
 }
 
 /* Conteúdo da face frontal */
@@ -222,7 +200,7 @@
   object-fit: cover;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   border: 3px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(145deg, #6366f1, #ec4899) padding-box;
+  background: linear-gradient(145deg, #D94B87, #ec4899) padding-box;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -230,7 +208,7 @@
   content: "";
   position: absolute;
   inset: -5px;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
+  background: linear-gradient(135deg, #D94B87, #ec4899);
   border-radius: inherit;
   z-index: -1;
   opacity: 0.4;
@@ -244,19 +222,19 @@
 .testimonial-info h4 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #f1f5f9;
   margin: 0 0 5px;
 }
 
 .testimonial-info .role {
-  color: var(--text-secondary);
+  color: rgba(241, 245, 249, 0.7);
   font-size: 0.9rem;
 }
 
 /* Texto do depoimento */
 .testimonial-text {
   position: relative;
-  color: var(--text-primary);
+  color: #f1f5f9;
   font-size: 0.95rem;
   line-height: 1.6;
   font-style: italic;
@@ -305,7 +283,7 @@
   background: linear-gradient(
     135deg,
     transparent 40%,
-    rgba(99, 102, 241, 0.7) 50%,
+    rgba(217, 75, 135, 0.7) 50%,
     transparent 60%
   );
   -webkit-mask: 
@@ -342,7 +320,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--text-primary);
+  color: #f1f5f9;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -355,7 +333,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
+  background: linear-gradient(135deg, #D94B87, #ec4899);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -409,7 +387,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #6366f1, #ec4899);
+  background: linear-gradient(90deg, #D94B87, #ec4899);
   transition: width 0.3s ease;
 }
 
@@ -443,7 +421,7 @@
 
 .testimonials-counter .current {
   font-size: 1.5rem;
-  color: var(--text-primary);
+  color: #f1f5f9;
   font-weight: 700;
 }
 
@@ -459,7 +437,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6366f1, #ec4899);
+  background: linear-gradient(135deg, #D94B87, #ec4899);
   filter: blur(1px);
   opacity: 0.6;
   z-index: 1;

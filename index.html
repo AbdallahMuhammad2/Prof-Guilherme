@@ -5,19 +5,19 @@
   <!-- Meta Básico -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Assinatura Completa 2025 - Prof. Alan Soares</title>
+  <title>Redação de Excelência - Profª Rachel Régis</title>
 
   <!-- SEO -->
   <meta name="description"
-    content="Domine disciplinas exatas com a Assinatura Completa 2025. Aulas de Matemática, Física, Raciocínio Lógico e mais, com o Prof. Alan Soares. Garanta já a sua!">
-  <meta property="og:title" content="Assinatura Completa 2025 - Prof. Alan Soares">
+    content="Transforme sua redação com a metodologia exclusiva da Profª Rachel Régis. Aulas de Redação, Gramática e Interpretação para ENEM, vestibulares e concursos. Aprovação garantida!">
+  <meta property="og:title" content="Redação de Excelência - Profª Rachel Régis">
   <meta property="og:description"
-    content="Domine disciplinas exatas com o Prof. Alan Soares. Aulas práticas e conteúdo completo!">
+    content="Domine a arte da escrita com a Profª Rachel Régis. Metodologia comprovada e resultados excepcionais!">
   <meta property="og:image" content="URL_DA_IMAGEM_DE_DESTAQUE">
   <meta property="og:url" content="URL_DA_SUA_PAGINA">
 
   <!-- Favicon -->
-  <link rel="icon" href="assets/imgs//NAV.png" type="image/x-icon">
+  <link rel="icon" href="./logo.png" type="image/x-icon">
 
   <!-- CSS Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
@@ -40,14 +40,19 @@
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/components/navbar.css">
   <link rel="stylesheet" href="assets/css/components/header.css">
-  <link rel="stylesheet" href="assets/css/components/courses-new.css">
-  <link rel="stylesheet" href="assets/css/components/buttons.css">
-  <link rel="stylesheet" href="assets/css/components/whatsapp.css">
+  <link rel="stylesheet" href="assets/css/components/courses.css">
   <link rel="stylesheet" href="assets/css/components/about.css">
   <link rel="stylesheet" href="assets/css/components/testimonials.css">
   <link rel="stylesheet" href="assets/css/components/cta.css">
   <link rel="stylesheet" href="assets/css/components/footer.css">
   <link rel="stylesheet" href="assets/css/components/youtube.css">
+  <link rel="stylesheet" href="assets/css/components/redacao-cards.css">
+  
+  <!-- CSS de Performance Extrema - Carregado por último para sobrescrever estilos -->
+  <link rel="stylesheet" href="assets/css/ultra-performance.css">
+  
+  <!-- Performance Optimizations -->
+  <link rel="stylesheet" href="assets/css/performance-optimizations.css">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" crossorigin="anonymous"
@@ -61,13 +66,16 @@
 </head>
 
 <body>
-
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5521998413016" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Navegação Principal">
     <div class="container">
       <a class="navbar-brand" href="#home" aria-label="Página Inicial">
-        <img src="./logo.png" alt="Logo do Prof. Alan Soares" loading="lazy">
+        <img src="./logo.png" alt="Logo da Profª Rachel Régis" loading="lazy">
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
@@ -85,198 +93,495 @@
             <a class="nav-link" href="#testimonials">Depoimentos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#youtube">YouTube</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#contact">Contato</a>
           </li>
-          
-          
+          <li class="nav-item ms-3">
+            <a href="#courses" class="btn btn-cta" role="button"
+              aria-label="Conheça os Cursos">
+              Comece Agora
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+  <br>
   <!-- Header Renovado -->
   <!-- Substitua o header atual por este trecho de código -->
 
- <!-- =======================================================
-     SUPER-HERO HEADER ✨  (Magenta + Gold Deluxe Edition)
-     Pronto para “colar” como está ↓
-======================================================== -->
-<header id="home" class="hero">
+  <!-- Header Renovado Ultra Premium -->
+  <header id="home" class="hero-section">
+    <!-- Background de redação animado -->
+    <div class="writing-background">
+      <canvas id="writingCanvas"></canvas>
+    </div>
 
-  <!-- ===== LAYERS / FX ===== -->
-  <canvas class="starfield" aria-hidden="true"></canvas>
-  <div class="noise"></div>
-  <div class="blur-blob blob-1"></div>
-  <div class="blur-blob blob-2"></div>
+    <!-- Elementos de iluminação premium -->
+    <div class="noise-overlay"></div>
+    <div class="light-atmosphere"></div>
+    <div class="light-atmosphere-2"></div>
 
-  <!-- ===== NAVBAR ===== -->
-  <nav class="navbar">
-    <img src="logo.png"  >Redação<span>&nbsp;Top</span></img>
-    <ul>
-      <li><a href="#home">Início</a></li>
-      <li><a href="#courses">Cursos</a></li>
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#contact" class="cta">Contato</a></li>
-    </ul>
-  </nav>
+    <div class="hero-inner">
+      <div class="hero-content" data-aos="fade-right">
+        <div class="title-badge">Professora Especialista em Redação</div>
+        <h1 class="hero-title">
+          Domine a <span class="gradient-text">Redação</span> com a
+          <br><strong class="hero-highlight">Metodologia Rachel Régis</strong>
+        </h1>
+        <p class="hero-description">
+          Transforme sua escrita com aulas de <strong>Redação</strong>,
+          <strong>Gramática</strong> e <strong>Interpretação</strong> apresentadas de forma
+          clara e estratégica por uma especialista com metodologia comprovada.
+        </p>
+        <div class="hero-ctas">
+          <a href="#courses" class="btn-glow">
+            <span>Comece Agora <i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#about" class="btn-outline">
+            <span>Conheça a Professora</span>
+          </a>
+        </div>
+        <ul class="hero-metrics">
+          <li class="metric">
+            <div class="metric-value">900+</div>
+            <div class="metric-label">Notas de Redação</div>
+          </li>
+          <li class="metric">
+            <div class="metric-value">500+</div>
+            <div class="metric-label">Alunos Aprovados</div>
+          </li>
+          <li class="metric">
+            <div class="metric-value">95%</div>
+            <div class="metric-label"><i class="fas fa-star"></i> Aprovação</div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-  <!-- ===== CONTENT WRAPPER ===== -->
-  <div class="container grid">
+   
+    <!-- DIVISÓRIA COM EFEITO DE DESINTEGRAÇÃO MOLECULAR v7.0 -->
+    <div class="disintegration-divider">
+      <!-- Grade que se desintegra -->
+      <div class="disintegration-grid"></div>
 
-    <!-- ==== LEFT (copy) ==== -->
-    <section class="text">
-      <span class="badge">Referência em Redação</span>
-
-      <h1>
-        Domine a&nbsp;
-        <span class="grad-shift">Redação</span><br>
-        com a<strong> Assinatura Completa&nbsp;2025</strong>
-      </h1>
-
-      <p>
-        Aulas de <strong>Redação</strong>, <strong>Gramática</strong> e
-        <strong>Interpretação</strong> ministradas por quem transformou
-        <em>+10&nbsp;mil</em> estudantes em aprovados.
-      </p>
-
-      <div class="buttons">
-        <a href="#courses" class="btn btn-primary">
-          <i class="fas fa-rocket"></i> Comece Agora
-        </a>
-        <a href="#about" class="btn btn-glass">
-          Conheça o Professor
-        </a>
+      <!-- Partículas fragmentadas -->
+      <div class="fragment-container">
+        <div class="fragment f1"></div>
+        <div class="fragment f2"></div>
+        <div class="fragment f3"></div>
+        <div class="fragment f4"></div>
+        <div class="fragment f5"></div>
+        <div class="fragment f6"></div>
+        <div class="fragment f7"></div>
+        <div class="fragment f8"></div>
+        <div class="fragment f9"></div>
+        <div class="fragment f10"></div>
+        <div class="fragment f11"></div>
+        <div class="fragment f12"></div>
       </div>
 
-      <ul class="stats">
-        <li><span>19+</span><small>Anos</small></li>
-        <li><span>10k+</span><small>Aprovados</small></li>
-        <li><span>5.0</span><small><i class="fas fa-star"></i>&nbsp;Rating</small></li>
-      </ul>
-    </section>
+      <!-- Linha de energia que se fragmenta -->
+      <div class="energy-line">
+        <div class="energy-glow"></div>
+        <div class="disintegration-points"></div>
+      </div>
 
-    <!-- ==== RIGHT (hero art) ==== -->
-    <figure class="hero-img">
-      <img src="profe2.jpg" alt="Professora sorrindo" />
-      <figcaption></figcaption>
-    </figure>
+      <!-- Camada de mesclagem suave -->
+      <div class="blend-layer"></div>
+    </div>
+    <!-- Camada de Mesclagem Inteligente -->
+    <div class="neo-blend-layer"></div>
 
-  </div>
-</header>
+    <!-- Linha Central Energizada -->
+    <div class="neo-energy-line">
+      <div class="energy-glow"></div>
+      <div class="energy-pulse"></div>
+    </div>
 
-<!-- =======================================================
-     CSS  (separe em style.css caso queira)
-======================================================== -->
+    <!-- Nódulos Tech -->
+    <div class="neo-nodes">
+      <div class="node node-1"></div>
+      <div class="node node-2"></div>
+      <div class="node node-3"></div>
+      <div class="node node-4"></div>
+      <div class="node node-5"></div>
+    </div>
 
+    <!-- Partículas Ultra Modernas -->
+    <div class="neo-particles">
+      <div class="particle-field"></div>
+    </div>
+    </div>
 
-
-  <!-- Botão Flutuante do WhatsApp -->
-  <a href="https://wa.me/5521998413016" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
-    aria-label="Fale conosco pelo WhatsApp">
-    <i class="fab fa-whatsapp" style="font-size: 25px;"></i>
-  </a>
-
+  </header>
 
   <main>
     <!-- Seção de Cursos em Grid - Substitua o trecho atual onde aparecem os cards -->
     <section class="courses-section" id="courses">
       <div class="container">
    <!-- Cabeçalho Ultra Premium v5.0 com Efeitos Avançados -->
+<div class="section-header premium-section-header">
+  <!-- Decoração Superior Aprimorada -->
+  <div class="section-header-decoration">
+    <div class="decoration-line left">
+      <div class="glow-effect"></div>
+    </div>
+    <div class="decoration-icon">
+      <div class="icon-background"></div>
+      <i class="fas fa-award"></i>
+      <div class="icon-particles">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="decoration-line right">
+      <div class="glow-effect"></div>
+    </div>
+  </div>
 
+  <!-- Título com Design Avançado -->
+  <h2 class="section-title">
+    <span class="title-badge">EXCLUSIVIDADE 2025</span>
+    <span class="title-main">
+      <span class="title-accent">Nossos</span> Cursos <span class="premium-text">Premium</span>
+    </span>
+    <div class="title-underline">
+      <div class="underline-glow"></div>
+    </div>
+  </h2>
 
+  <!-- Descrição Aprimorada -->
+  <p class="section-description">
+    Aprenda redação, gramática e interpretação de forma prática e interativa, com foco nos
+    <strong class="highlight-text">principais exames</strong> do país. Da teoria à prática, tudo o que você precisa
+    para alcançar sua <strong class="highlight-text">aprovação</strong> com confiança.
+  </p>
 
+  <!-- Elementos Gráficos de Redação 3D -->
+  <div class="section-header-graphic">
+    <div class="graphic-element elem1">✒</div>
+    <div class="graphic-element elem2">※</div>
+    <div class="graphic-element elem3">◊</div>
+    <div class="graphic-element elem4">⟐</div>
+    <div class="graphic-element elem5">⟡</div>
+  </div>
+  
+  <!-- Efeito de Partículas Sutis -->
+  <div class="particles-container">
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+    <div class="particle p4"></div>
+    <div class="particle p5"></div>
+    <div class="particle p6"></div>
+  </div>
+</div>
 
-
-        <!-- Nova Seção de Cursos Fenomenal -->
-        <div class="courses-container">
-          <div class="section-header">
-            <h2 class="section-title">Cursos Transformadores</h2>
-            <p class="section-subtitle">Domine as disciplinas exatas com metodologia comprovada e resultados garantidos</p>
-          </div>
+        <!-- Cards Premium de Redação -->
+        <div class="redacao-cards-grid">
           
-          <div class="courses-grid">
-            <!-- Curso de Matemática -->
-            <div class="course-card">
-              <div class="course-badge">Mais Popular</div>
-              <div class="course-header">
-                <div class="course-icon">📊</div>
+          <!-- Card 1: Aulas Individuais/Grupo -->
+          <div class="redacao-card premium-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-glow-effect"></div>
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-users"></i>
               </div>
-              <div class="course-content">
-                <h3 class="course-title">Matemática Completa</h3>
-                <p class="course-description">Domine todos os conceitos de matemática do básico ao avançado com metodologia exclusiva.</p>
-                <ul class="course-features">
-                  <li>Mais de 200 videoaulas</li>
-                  <li>Exercícios resolvidos</li>
-                  <li>Simulados práticos</li>
-                  <li>Suporte direto</li>
-                </ul>
-              </div>
-              <div class="course-footer">
-                <div class="course-price">
-                  <span class="price-original">R$ 297,00</span>
-                  <span class="price-current">R$ 197,00</span>
+              <div class="card-badge">Flexível</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Aulas de Redação<br><span class="title-highlight">Individual ou em Grupo</span></h3>
+              <p class="card-description">Você escolhe: atendimento personalizado no 1 a 1 ou trocas riquíssimas em grupo. Teoria e prática caminham juntas, com direcionamento específico para sua prova.</p>
+              <div class="card-features">
+                <div class="feature-item">
+                  <i class="fas fa-video"></i>
+                  <span>Aulas ao Vivo</span>
                 </div>
-                <button class="course-cta">Começar Agora</button>
+                <div class="feature-item">
+                  <i class="fas fa-target"></i>
+                  <span>Foco na sua Prova</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-edit"></i>
+                  <span>Prática Constante</span>
+                </div>
               </div>
             </div>
+            <div class="card-footer">
+              <div class="price-container">
+                <span class="price-label">Investimento</span>
+                <span class="price-value">A Combinar</span>
+              </div>
+              <button class="card-cta-btn">
+                <span>Saiba Mais</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
 
-            <!-- Curso de Física -->
-            <div class="course-card">
-              <div class="course-header">
-                <div class="course-icon">⚡</div>
+          <!-- Card 2: Mentoria Língua Portuguesa -->
+          <div class="redacao-card premium-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-glow-effect"></div>
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-book-open"></i>
               </div>
-              <div class="course-content">
-                <h3 class="course-title">Física Descomplicada</h3>
-                <p class="course-description">Aprenda física de forma simples e prática, com exemplos do dia a dia.</p>
-                <ul class="course-features">
-                  <li>Experimentos práticos</li>
-                  <li>Fórmulas simplificadas</li>
-                  <li>Resolução de questões</li>
-                  <li>Material de apoio</li>
-                </ul>
-              </div>
-              <div class="course-footer">
-                <div class="course-price">
-                  <span class="price-original">R$ 247,00</span>
-                  <span class="price-current">R$ 147,00</span>
+              <div class="card-badge">Sábados</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mentoria de<br><span class="title-highlight">Língua Portuguesa</span></h3>
+              <p class="card-description">Gramática e interpretação de forma leve e direta. Estratégias que fazem a diferença no dia da avaliação, focando no que mais cai em provas.</p>
+              <div class="card-features">
+                <div class="feature-item">
+                  <i class="fas fa-clock"></i>
+                  <span>14h30 às 15h30</span>
                 </div>
-                <button class="course-cta">Começar Agora</button>
+                <div class="feature-item">
+                  <i class="fas fa-brain"></i>
+                  <span>Estratégias Práticas</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Resultados Rápidos</span>
+                </div>
               </div>
             </div>
+            <div class="card-footer">
+              <div class="price-container">
+                <span class="price-label">Investimento</span>
+                <span class="price-value">R$ 60<span class="price-period">/mês</span></span>
+              </div>
+              <button class="card-cta-btn">
+                <span>Saiba Mais</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
 
-            <!-- Curso de Redação -->
-            <div class="course-card">
-              <div class="course-badge">Exclusivo</div>
-              <div class="course-header">
-                <div class="course-icon">✍️</div>
+          <!-- Card 3: Mentoria Redação -->
+          <div class="redacao-card premium-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-glow-effect"></div>
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-pen-fancy"></i>
               </div>
-              <div class="course-content">
-                <h3 class="course-title">Redação Nota 1000</h3>
-                <p class="course-description">Metodologia exclusiva para alcançar a nota máxima no ENEM e vestibulares.</p>
-                <ul class="course-features">
-                  <li>Correção personalizada</li>
-                  <li>Técnicas avançadas</li>
-                  <li>Banco de repertórios</li>
-                  <li>Aulas ao vivo</li>
-                </ul>
-              </div>
-              <div class="course-footer">
-                <div class="course-price">
-                  <span class="price-original">R$ 197,00</span>
-                  <span class="price-current">R$ 97,00</span>
+              <div class="card-badge">Completo</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Mentoria de Redação<br><span class="title-highlight">Concursos & Vestibulares</span></h3>
+              <p class="card-description">Impacte, argumente e mostre repertório. Técnica argumentativa, repertório sociocultural e segurança para qualquer tema de qualquer banca.</p>
+              <div class="card-features">
+                <div class="feature-item">
+                  <i class="fas fa-trophy"></i>
+                  <span>Técnicas Avançadas</span>
                 </div>
-                <button class="course-cta">Começar Agora</button>
+                <div class="feature-item">
+                  <i class="fas fa-library"></i>
+                  <span>Repertório Cultural</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Qualquer Banca</span>
+                </div>
               </div>
+            </div>
+            <div class="card-footer">
+              <div class="price-container">
+                <span class="price-label">Investimento</span>
+                <span class="price-value">R$ 100<span class="price-period">/mês</span></span>
+              </div>
+              <button class="card-cta-btn">
+                <span>Saiba Mais</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 4: Correção de Redação -->
+          <div class="redacao-card premium-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-glow-effect"></div>
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-check-double"></i>
+              </div>
+              <div class="card-badge">Pacote</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Correção de<br><span class="title-highlight">Redação Premium</span></h3>
+              <p class="card-description">Análise completa do que está bom e do que pode melhorar. Cada correção é um empurrão rumo à sua aprovação, com feedback detalhado.</p>
+              <div class="card-features">
+                <div class="feature-item">
+                  <i class="fas fa-search"></i>
+                  <span>Análise Detalhada</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-comments"></i>
+                  <span>Feedback Completo</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-rocket"></i>
+                  <span>Evolução Rápida</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="price-container">
+                <span class="price-label">3 Textos por</span>
+                <span class="price-value">R$ 50<span class="price-period">,00</span></span>
+              </div>
+              <button class="card-cta-btn">
+                <span>Saiba Mais</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Seção de Destaque Final -->
+        <div class="redacao-highlight-section" data-aos="fade-up" data-aos-delay="500">
+          <div class="highlight-content">
+            <div class="highlight-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Aulas com Toque Humano</h3>
+            <p>Todas as aulas são ao vivo e online, com aquele toque humano que tanto faz falta nas plataformas automatizadas. Aqui, você será <strong>visto, ouvido e acompanhado</strong>.</p>
+            <div class="highlight-cta">
+              <p class="cta-text">Se você tem um sonho e está disposto a escrever a própria história com mais <strong>clareza, coesão e propósito</strong>… a hora é agora.</p>
+              <button class="highlight-btn">
+                <span>Vem Comigo!</span>
+                <i class="fas fa-star"></i>
+              </button>
             </div>
           </div>
         </div>
+        <div class="courses-grid" style="display:none;">
+
+          <!-- Card 1 -->
+          <div class="course-card-premium" data-category="matematica">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-image-wrapper">
+                  <div class="image-overlay"></div>
+                  <div class="card-image-shine"></div>
+                  <img src="assets/imgs/cursos/curso2.jpg" alt="Matemática para Concursos"
+                    class="card-image force-visible-image">
+
+                  <div class="card-tag">Mais Popular</div>
+                </div>
+
+                <div class="card-content">
+                  <div>
+                    <span class="card-category"><i class="fas fa-pen"></i>Redação</span>
+                    <h3 class="card-title">Aulas de Redação — Individual ou em Grupo</h3>
+                  </div>
+
+                  <div class="card-meta">
+                    <div class="course-price">
+                      <div class="price-original">R$ 397,00</div>
+                      <div class="price-current premium-diamond">Preço a combinar</div>
+                      <div class="price-discount">-51%</div>
+                    </div>
+
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="action-button">
+                      <span>Saiba Mais <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Badge de acesso vitalício -->
+          </div>
+
+          <!-- Card 2 -->
+          <div class="course-card-premium" data-category="fisica">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-image-wrapper">
+                  <div class="image-overlay"></div>
+                  <div class="card-image-shine"></div>
+                  <img src="assets/imgs/cursos/CAPAS DOS PRODUTOS FEED (2).png" alt="Física para Concursos"
+                    class="card-image force-visible-image">
+
+                  <div class="card-tag">Recomendado</div>
+                </div>
+
+                <div class="card-content">
+                  <div>
+                    <span class="card-category"><i class="fas fa-book-open"></i>Língua Portuguesa</span>
+                    <h3 class="card-title">Mentoria de Língua Portuguesa</h3>
+                  </div>
+
+
+
+                  <div class="card-meta">
+                    <div class="course-price">
+                      <div class="price-original">R$ 294,00</div>
+                      <div class="price-current premium-gold">R$ 60/mês</div>
+                      <div class="price-discount">-50%</div>
+                    </div>
+
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="action-button">
+                      <span>Saiba Mais <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Card 3 -->
+          <div class="course-card-premium" data-category="estatistica">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-image-wrapper">
+                  <div class="image-overlay"></div>
+                  <div class="card-image-shine"></div>
+                  <img src="assets/imgs/cursos/CAPAS DOS PRODUTOS FEED (3).png" alt="Estatística para Concursos"
+                    class="card-image force-visible-image">
+
+                  <div class="card-tag">Novo</div>
+                </div>
+
+                <div class="card-content">
+                  <div>
+                    <span class="card-category"><i class="fas fa-scroll"></i>Redação</span>
+                    <h3 class="card-title">
+                      Mentoria de Redação – Concursos e Vestibulares</h3>
+                  </div>
+
+                  <div class="card-meta">
+                    <div class="course-price">
+                      <div class="price-original">R$ 397,00</div>
+                      <div class="price-current premium-diamond">R$ 100/mês</div>
+                      <div class="price-discount">-51%</div>
+                    </div>
+
+                  </div>
+
+                  <div class="card-action">
+                    <a href="#" class="action-button">
+                      <span>Saiba Mais <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
-   
-    <!-- Replace your current about section with this: -->
-
+  
     <section id="about">
       <div class="about-bg">
         <div class="cinematic-bg"></div>
@@ -293,7 +598,7 @@
               <div class="img-glow"></div>
 
               <div class="img-primary">
-                <img src="./profe.jpg" alt="Profª Rachel Régis">
+                <img src="./profe.jpg" alt="Professora Rachel Régis">
                 <div class="img-overlay">
                   <div class="overlay-gradient"></div>
                   <div class="overlay-grain"></div>
@@ -307,21 +612,21 @@
               <!-- Achievement badges -->
               <div class="achievement-badge badge-1">
                 <div class="badge-icon">
-                  <i class="fas fa-graduation-cap"></i>
+                  <i class="fas fa-pen-nib"></i>
                 </div>
                 <div class="badge-text">
-                  <span class="value">10+</span>
-                  <span class="label">Anos de Experiência</span>
+                  <span class="value">900+</span>
+                  <span class="label">Notas de Redação</span>
                 </div>
               </div>
 
               <div class="achievement-badge badge-2">
                 <div class="badge-icon award">
-                  <i class="fas fa-file-alt"></i>
+                  <i class="fas fa-trophy"></i>
                 </div>
                 <div class="badge-text">
-                  <span class="value">5k+</span>
-                  <span class="label">Redações Corrigidas</span>
+                  <span class="value">95%</span>
+                  <span class="label">Taxa de Aprovação</span>
                 </div>
               </div>
             </div>
@@ -338,18 +643,27 @@
             <span class="section-label">Sobre a Professora</span>
 
             <div class="about-heading">
-              <h2>Profª <span class="highlight">Rachel Régis</span></h2>
-              <p>Especialista em redação, a Profª Rachel Régis ensina técnicas exclusivas de estrutura, argumentação e estilo para você conquistar notas máximas no ENEM, vestibulares e concursos.</p>
+              <h2>Professora <span class="highlight">Rachel Régis</span></h2>
+              <p>Rachel Régis é professora especialista em Redação e Linguagens, reconhecida por transformar a insegurança dos estudantes em estratégia clara de aprovação. Com uma abordagem que une técnica, repertório curado e correção cirúrgica, ela já orientou centenas de alunos rumo a notas de excelência em redações de vestibulares e exames nacionais.</p>
             </div>
 
             <div class="expertise-areas">
               <div class="expertise-item">
                 <div class="expertise-icon">
                   <div class="expertise-icon-bg"></div>
-                  <i class="fas fa-pencil-alt"></i>
+                  <i class="fas fa-pen-fancy"></i>
                 </div>
-                <h3 class="expertise-title">Estrutura do Texto</h3>
-                <p class="expertise-description">Domine introdução, desenvolvimento e conclusão com coesão e clareza.</p>
+                <h3 class="expertise-title">Redação ENEM e Vestibulares</h3>
+                <p class="expertise-description">Metodologia exclusiva para redações nota 1000, com estrutura inteligente e repertório contextualizado.</p>
+              </div>
+
+              <div class="expertise-item">
+                <div class="expertise-icon">
+                  <div class="expertise-icon-bg"></div>
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="expertise-title">Gramática e Interpretação</h3>
+                <p class="expertise-description">Domínio completo da língua portuguesa com foco em questões de concursos e vestibulares.</p>
               </div>
 
               <div class="expertise-item">
@@ -357,41 +671,32 @@
                   <div class="expertise-icon-bg"></div>
                   <i class="fas fa-comments"></i>
                 </div>
-                <h3 class="expertise-title">Argumentação e Coesão</h3>
-                <p class="expertise-description">Aprenda a construir argumentos sólidos e conectá-los de forma lógica.</p>
+                <h3 class="expertise-title">Técnicas de Argumentação</h3>
+                <p class="expertise-description">Desenvolvimento de argumentos sólidos e persuasivos para textos dissertativos de excelência.</p>
               </div>
 
               <div class="expertise-item">
                 <div class="expertise-icon">
                   <div class="expertise-icon-bg"></div>
-                  <i class="fas fa-spell-check"></i>
+                  <i class="fas fa-edit"></i>
                 </div>
-                <h3 class="expertise-title">Ortografia e Gramática</h3>
-                <p class="expertise-description">Evite erros comuns e refine sua escrita com dicas práticas.</p>
-              </div>
-
-              <div class="expertise-item">
-                <div class="expertise-icon">
-                  <div class="expertise-icon-bg"></div>
-                  <i class="fas fa-lightbulb"></i>
-                </div>
-                <h3 class="expertise-title">Estilo e Criatividade</h3>
-                <p class="expertise-description">Desenvolva um tom único e criativo que destaque sua redação.</p>
+                <h3 class="expertise-title">Correção Personalizada</h3>
+                <p class="expertise-description">Feedback detalhado e estratégico que acelera a evolução de cada versão escrita.</p>
               </div>
             </div>
-    
             <div class="stats-container">
               <div class="stat-item">
                 <div class="stat-icon">
                   <div class="stat-icon-bg"></div>
                   <div class="stat-icon-inner">
-                    <i class="fas fa-graduation-cap"></i>
+                    <i class="fas fa-pen-nib"></i>
                   </div>
                 </div>
-                <div class="stat-number parallax-text depth-2" data-value="10" data-plus="true">10<span class="plus">+</span></div>
-                <div class="stat-label">Anos de Experiência</div>
+                <div class="stat-number parallax-text depth-2" data-value="900" data-plus="true">900<span
+                    class="plus">+</span></div>
+                <div class="stat-label">Notas de Redação</div>
                 <div class="stat-description">
-                  Década dedicada ao ensino de redação.
+                  Centenas de alunos conquistaram notas acima de 900 na redação do ENEM.
                 </div>
               </div>
 
@@ -399,13 +704,14 @@
                 <div class="stat-icon">
                   <div class="stat-icon-bg"></div>
                   <div class="stat-icon-inner">
-                    <i class="fas fa-file-alt"></i>
+                    <i class="fas fa-users"></i>
                   </div>
                 </div>
-                <div class="stat-number parallax-text depth-2" data-value="5000" data-plus="true">5k<span class="plus">+</span></div>
-                <div class="stat-label">Redações Corrigidas</div>
+                <div class="stat-number parallax-text depth-2" data-value="500" data-plus="true">500<span
+                    class="plus">+</span></div>
+                <div class="stat-label">Alunos Aprovados</div>
                 <div class="stat-description">
-                  Estudantes apoiados rumo à nota máxima.
+                  Centenas de histórias de sucesso em vestibulares e concursos.
                 </div>
               </div>
 
@@ -413,17 +719,16 @@
                 <div class="stat-icon">
                   <div class="stat-icon-bg"></div>
                   <div class="stat-icon-inner">
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-trophy"></i>
                   </div>
                 </div>
-                <div class="stat-number parallax-text depth-2" data-value="4.9">4.9</div>
-                <div class="stat-label">Avaliação Média</div>
+                <div class="stat-number parallax-text depth-2" data-value="95">95<span class="plus">%</span></div>
+                <div class="stat-label">Taxa de Aprovação</div>
                 <div class="stat-description">
-                  Excelência reconhecida por alunos aprovados.
+                  Excelência comprovada com alta taxa de aprovação dos nossos alunos.
                 </div>
               </div>
             </div>
-    
             <!-- Adicione ao final da seção de sobre (dentro de about-text-container) -->
             <div class="about-cta">
               <a href="#courses" class="btn-about">
@@ -442,7 +747,6 @@
         </div>
       </div>
     </section>
-    
     <section id="testimonials">
       <div class="container">
         <div class="testimonials-header">
@@ -611,34 +915,7 @@
       </div>
     </section>
 
-    <!-- YouTube Section -->
-    <section id="youtube" aria-labelledby="youtube-section">
-      <!-- Elementos decorativos -->
-      <div class="yt-decoration play-icon-large"></div>
-      <div class="yt-decoration play-icon-small"></div>
 
-      <!-- Vídeo de Fundo -->
-      <div class="video-background">
-        <iframe
-          src="https://www.youtube.com/embed/98PaRzF1ky8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&playlist=98PaRzF1ky8&modestbranding=1&rel=0&fs=0&iv_load_policy=3"
-          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"
-          title="Operação TJ SP: Raciocínio Lógico - Prof. Alan Soares"></iframe>
-      </div>
-
-      <!-- Overlay para Escurecer o Vídeo -->
-      <div class="overlay" aria-hidden="true"></div>
-
-      <!-- Conteúdo Sobreposto -->
-      <div class="content" data-aos="fade-up">
-        <h2 id="youtube-section">Canal Exclusivo no YouTube</h2>
-        <p>Acesse aulas, dicas e conteúdos gratuitos que já ajudaram milhares de alunos a conquistarem aprovações em
-          concursos e vestibulares.</p>
-        <a href="https://www.youtube.com/@exatascomalansoare" target="_blank" rel="noopener noreferrer"
-          class="btn btn-danger" role="button" aria-label="Visitar canal no YouTube">
-          <i class="fab fa-youtube"></i>Acesse Agora o Canal
-        </a>
-      </div>
-    </section>
 
 
 
@@ -664,7 +941,7 @@
     <div class="footer-container">
       <div class="footer-bottom">
         <div class="footer-copyright">
-          &copy; 2025 Professor Alan Soares. Todos os direitos reservados.
+          &copy; 2025 Professora Rachel Régis. Todos os direitos reservados.
         </div>
 
         <div class="footer-links-bottom">
@@ -687,6 +964,10 @@
     </div>
   </footer>
 
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5521998413016" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Script de backup para o contador -->
   <script>
@@ -727,13 +1008,17 @@
   </script>
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    integrity="sha512-+iU0XeRwZvJf0X3W9Qa4K9Jf0Xz9e1X7LJ3MjF+3Zk1U5IeWKsU6l3QyR1C7k0DfJ8bP4Lf4UI85/2bbVbKQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8/swiper-bundle.min.js" crossorigin="anonymous"
-    referrerpolicy="no-referrer" defer></script>
+    referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"
-    referrerpolicy="no-referrer" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"
-    referrerpolicy="no-referrer" defer></script>
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+    
+  <!-- Script de Performance Extrema - Carregado antes de outros scripts -->
+  <script src="assets/js/performance.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/components/testimonials.js" defer></script>
   <script src="assets/js/components/animations.js" defer></script>

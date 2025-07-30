@@ -1661,50 +1661,7 @@ a.nav-link:hover,
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 101, 132, 0.5);
 }
- /* 20. Botão Flutuante do WhatsApp */
- .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: #25D366;
-    /* Cor característica do WhatsApp */
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1500;
-    /* Acima de outros elementos */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-}
 
-.whatsapp-float:hover {
-    background-color: #3cff00;
-    /* Cor do WhatsApp ao passar o mouse */
-    transform: scale(1.1);
-}
-
-.whatsapp-float i {
-    pointer-events: none;
-    /* Evita que o ícone capture eventos de clique */
-}
-
-/* Responsividade para o WhatsApp Float */
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 24px;
-    }
-}
 .developed-by {
     text-align: center;
     margin-top: 20px;

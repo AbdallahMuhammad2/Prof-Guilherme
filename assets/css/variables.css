@@ -1,140 +1,45 @@
 :root {
-  /* ===== CORES DA MARCA ===== */
-  /* Cores principais */
-  --magenta:       #D94B87;  /* CMYK: 10 82 14 0 - Cor principal */
-  --gold:          #F7BC6C;  /* CMYK: 2 31 64 0 - Cor secundária */
-  --white:         #FFFFFF;  /* CMYK: 0 0 0 0 - Texto principal */
-  --light-pink:    #F7DBE7;  /* CMYK: 2 20 3 0 - Backgrounds suaves */
-  --light-yellow:  #FDF2E2;  /* CMYK: 1 6 14 0 - Cards e conteúdo */
-
-  /* ===== SISTEMA DE CORES HARMÔNICO ===== */
-  /* Cores primárias */
-  --primary:           var(--magenta);
-  --primary-light:     #E67BA3;
-  --primary-dark:      #C23B75;
-  --primary-gradient:  linear-gradient(135deg, var(--magenta) 0%, var(--gold) 100%);
+  /* Cores principais - Paleta Rachel Régis */
+  --primary: #D94B87; /* Magenta */
+  --primary-light: #F7DBE7; /* Light Pink */
+  --primary-dark: #B8396E; /* Magenta mais escuro */
+  --secondary: #F7BC6C; /* Gold Yellow */
+  --secondary-light: #FDF2E2; /* Light Yellow */
+  --secondary-dark: #E5A855; /* Gold mais escuro */
+  --accent: #FFFFFF; /* Pure White */
+  --accent-light: #F7DBE7; /* Light Pink */
   
-  /* Cores secundárias */
-  --secondary:         var(--gold);
-  --secondary-light:   #F9CA89;
-  --secondary-dark:    #F5AE4F;
+  /* Cores de fundo e texto */
+  --background: #0f172a;
+  --surface: #1e293b;
+  --surface-light: #334155;
+  --text-light: #f8fafc;
+  --text-dark: #1e293b;
+  --text-muted: #94a3b8;
   
-  /* Backgrounds harmônicos */
-  --bg-primary:        var(--light-yellow);    /* Fundo principal claro */
-  --bg-secondary:      var(--light-pink);      /* Fundo alternativo */
-  --bg-dark:           #0F1419;                /* Fundo escuro elegante */
-  --bg-glass:          rgba(253, 242, 226, 0.1); /* Efeito vidro */
-  --bg-overlay:        rgba(217, 75, 135, 0.1);  /* Overlay sutil */
+  /* Efeitos e transições */
+  --transition-fast: 0.3s;
+  --transition-medium: 0.5s;
+  --transition-slow: 0.8s;
   
-  /* Texto harmônico */
-  --text-primary:      #2D1B3D;                /* Texto escuro principal */
-  --text-secondary:    #5A4A6B;                /* Texto secundário */
-  --text-light:        var(--white);           /* Texto claro */
-  --text-muted:        #8B7A9C;                /* Texto esmaecido */
-  --text-accent:       var(--magenta);         /* Texto de destaque */
+  /* Sombras */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.3);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
   
-  /* Bordas e divisores */
-  --border-light:      rgba(217, 75, 135, 0.2);
-  --border-medium:     rgba(217, 75, 135, 0.3);
-  --border-strong:     var(--magenta);
+  /* Fontes */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
   
-  /* Estados interativos */
-  --hover-primary:     #E67BA3;
-  --hover-secondary:   #F9CA89;
-  --focus-ring:        rgba(217, 75, 135, 0.3);
-  --active-state:      #C23B75;
-
-  /* ===== TRANSIÇÕES E ANIMAÇÕES ===== */
-  --transition-fast:   0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-medium: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow:   0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  /* ===== SOMBRAS HARMÔNICAS ===== */
-  --shadow-soft:      0 2px 8px rgba(217, 75, 135, 0.1);
-  --shadow-medium:    0 4px 16px rgba(217, 75, 135, 0.15);
-  --shadow-strong:    0 8px 32px rgba(217, 75, 135, 0.2);
-  --shadow-glow:      0 0 20px rgba(247, 188, 108, 0.3);
-  --shadow-inner:     inset 0 2px 4px rgba(217, 75, 135, 0.1);
-
-  /* ===== TIPOGRAFIA ===== */
-  --font-heading:     'Poppins', 'Plus Jakarta Sans', sans-serif;
-  --font-body:        'Poppins', 'Syne', sans-serif;
-  --font-accent:      'Montserrat', sans-serif;
+  /* Bordas */
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.75rem;
+  --border-radius-lg: 1.5rem;
+  --border-radius-full: 9999px;
   
-  /* Tamanhos de fonte responsivos */
-  --text-xs:          clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
-  --text-sm:          clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
-  --text-base:        clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
-  --text-lg:          clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
-  --text-xl:          clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
-  --text-2xl:         clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
-  --text-3xl:         clamp(2rem, 1.7rem + 1.2vw, 2.5rem);
-  --text-4xl:         clamp(2.5rem, 2rem + 1.5vw, 3.5rem);
-
-  /* ===== BORDAS E RAIOS ===== */
-  --radius-sm:        0.5rem;
-  --radius-md:        0.75rem;
-  --radius-lg:        1rem;
-  --radius-xl:        1.5rem;
-  --radius-2xl:       2rem;
-  --radius-full:      9999px;
-
-  /* ===== ESPAÇAMENTOS ===== */
-  --space-xs:         0.5rem;
-  --space-sm:         1rem;
-  --space-md:         1.5rem;
-  --space-lg:         2rem;
-  --space-xl:         3rem;
-  --space-2xl:        4rem;
-  --space-3xl:        6rem;
-
-  /* ===== LAYOUT ===== */
-  --navbar-height:    80px;
-  --container-sm:     640px;
-  --container-md:     768px;
-  --container-lg:     1024px;
-  --container-xl:     1280px;
-  --container-2xl:    1536px;
-  --container-max:    1400px;
-  
-  /* Z-index system */
-  --z-dropdown:       1000;
-  --z-sticky:         1020;
-  --z-fixed:          1030;
-  --z-modal-backdrop: 1040;
-  --z-modal:          1050;
-  --z-popover:        1060;
-  --z-tooltip:        1070;
-  --z-toast:          1080;
+  /* Dimensões da interface */
+  --navbar-height: 80px;
+  --top-bar-height: 40px;
+  --container-max-width: 1200px;
 }
-
-/* ===== GRADIENTES HARMÔNICOS ===== */
-.gradient-primary {
-  background: var(--primary-gradient);
-}
-
-.gradient-soft {
-  background: linear-gradient(135deg, var(--light-pink) 0%, var(--light-yellow) 100%);
-}
-
-.gradient-warm {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--secondary-light) 100%);
-}
-
-.gradient-cool {
-  background: linear-gradient(135deg, var(--primary-light) 0%, var(--light-pink) 100%);
-}
-
-/* ===== CLASSES UTILITÁRIAS DE COR ===== */
-.text-primary { color: var(--primary); }
-.text-secondary { color: var(--secondary); }
-.text-accent { color: var(--text-accent); }
-.text-muted { color: var(--text-muted); }
-
-.bg-primary { background-color: var(--bg-primary); }
-.bg-secondary { background-color: var(--bg-secondary); }
-.bg-glass { background-color: var(--bg-glass); }
-
-.border-primary { border-color: var(--primary); }
-.border-secondary { border-color: var(--secondary); }
