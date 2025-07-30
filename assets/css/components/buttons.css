@@ -1,0 +1,325 @@
+/* ===== BOTÕES HARMÔNICOS COM CORES DA MARCA ===== */
+@import url('../variables.css');
+
+/* ===== BOTÃO PRIMÁRIO ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-base);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-lg);
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--hover-primary) 0%, var(--hover-secondary) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: -1;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-strong);
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-medium);
+}
+
+/* ===== BOTÃO SECUNDÁRIO ===== */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-base);
+  text-decoration: none;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius-lg);
+  background: transparent;
+  color: var(--primary);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  transform: translateY(100%);
+  transition: transform var(--transition-medium);
+  z-index: -1;
+}
+
+.btn-secondary:hover {
+  color: var(--text-light);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary:hover::before {
+  transform: translateY(0);
+}
+
+/* ===== BOTÃO OUTLINE ===== */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(217, 75, 135, 0.05);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ===== BOTÃO GHOST ===== */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-ghost::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg-glass);
+  border-radius: var(--radius-md);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: -1;
+}
+
+.btn-ghost:hover {
+  color: var(--primary);
+}
+
+.btn-ghost:hover::before {
+  opacity: 1;
+}
+
+/* ===== BOTÃO CTA ESPECIAL ===== */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-lg);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-xl);
+  background: var(--primary-gradient);
+  color: var(--text-light);
+  box-shadow: var(--shadow-strong);
+  transition: all var(--transition-medium);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-cta::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, var(--primary), var(--secondary), var(--primary));
+  border-radius: var(--radius-xl);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: -2;
+}
+
+.btn-cta::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(135deg, var(--hover-primary) 0%, var(--hover-secondary) 100%);
+  border-radius: calc(var(--radius-xl) - 2px);
+  opacity: 0;
+  transition: opacity var(--transition-medium);
+  z-index: -1;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    var(--shadow-strong),
+    var(--shadow-glow);
+}
+
+.btn-cta:hover::before {
+  opacity: 1;
+}
+
+.btn-cta:hover::after {
+  opacity: 1;
+}
+
+/* ===== TAMANHOS DOS BOTÕES ===== */
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 1.5rem 3rem;
+  font-size: var(--text-xl);
+  border-radius: var(--radius-xl);
+}
+
+.btn-xl {
+  padding: 2rem 4rem;
+  font-size: var(--text-2xl);
+  border-radius: var(--radius-2xl);
+}
+
+/* ===== ESTADOS DOS BOTÕES ===== */
+.btn:disabled,
+.btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn:disabled:hover,
+.btn[disabled]:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== BOTÕES COM ÍCONES ===== */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+
+.btn-icon-sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.btn-icon-lg {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* ===== GRUPO DE BOTÕES ===== */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-group-vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.btn-group-center {
+  justify-content: center;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .btn-cta {
+    padding: 1rem 2rem;
+    font-size: var(--text-base);
+  }
+  
+  .btn-lg {
+    padding: 1.25rem 2.5rem;
+    font-size: var(--text-lg);
+  }
+  
+  .btn-group {
+    gap: 0.75rem;
+  }
+  
+  .btn-group-vertical {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: var(--text-sm);
+  }
+  
+  .btn-cta {
+    padding: 0.875rem 1.75rem;
+    font-size: var(--text-sm);
+  }
+}

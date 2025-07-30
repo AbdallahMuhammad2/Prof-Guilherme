@@ -1,0 +1,35 @@
+/* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
+@import url('../variables.css');
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: #25D366; /* verde WhatsApp */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: var(--z-fixed);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.55);
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+  }
+}
