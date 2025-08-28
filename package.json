@@ -1,7 +1,7 @@
 {
-    "name": "professor-alan",
+    "name": "professor-guilherme",
     "version": "1.0.0",
-    "description": "Site do Professor Alan Soares",
+    "description": "Site do Professor guilherme Soares",
     "main": "index.html",
     "scripts": {
       "dev": "live-server --port=3000",

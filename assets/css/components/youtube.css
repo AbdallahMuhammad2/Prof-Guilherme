@@ -183,7 +183,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #e11d48, #f43f5e);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   border-radius: 4px;
   box-shadow: 0 5px 15px rgba(225, 29, 72, 0.5);
 }
@@ -212,7 +212,7 @@
   font-weight: 700;
   letter-spacing: 0.5px;
   color: #fff;
-  background: linear-gradient(135deg, #f43f5e, #e11d48);
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
   border-radius: 50px;
   box-shadow: 
     0 10px 30px rgba(225, 29, 72, 0.5),
@@ -277,7 +277,7 @@
     0 15px 35px rgba(225, 29, 72, 0.6),
     0 8px 20px rgba(0, 0, 0, 0.3),
     0 0 0 2px rgba(255, 255, 255, 0.15);
-  background: linear-gradient(135deg, #f43f5e, #be123c);
+  background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
 }
 
 #youtube .btn-danger:hover i {

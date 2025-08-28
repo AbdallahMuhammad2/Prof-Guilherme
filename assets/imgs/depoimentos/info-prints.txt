@@ -1,0 +1,13 @@
+/* Este arquivo será usado para salvar informações sobre os prints de depoimento */
+
+/* Print 1 - Caroline Pirovani */
+- Nome: EDUC Caroline Pirovani
+- Mensagem: "Professor, muito obrigada por tudo aprendizado, acertei 40 questões, foi o melhor concurso que fiz até agora, graças ao seu conhecimento"
+- Data: 17 de março de 2025
+- Resultado: 40 questões corretas
+
+/* Print 2 - Eliane Costa */  
+- Nome: EDUC Eliane Costa
+- Mensagem: "Boa tarde Professor! Tirei 18,5 na discursiva de Cariacica graças as suas aulas pelo YouTube. Gratidão eterna! Que Deus continue te abençoando! Que vc seja próspero em todas as áreas da sua vida!"
+- Data: 13 de dezembro de 2024
+- Resultado: 18,5 na discursiva

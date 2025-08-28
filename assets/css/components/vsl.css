@@ -1,0 +1,294 @@
+/* ===== SEÇÃO VSL (VIDEO SALES LETTER) ===== */
+
+.vsl-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.vsl-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(27, 74, 153, 0.3), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.2), transparent 50%);
+  opacity: 0.8;
+  animation: pulseVSL 20s infinite alternate;
+}
+
+@keyframes pulseVSL {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.6; }
+}
+
+.vsl-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.vsl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.vsl-badge i {
+  font-size: 16px;
+}
+
+.vsl-title {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.vsl-description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.vsl-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.video-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  width: 100%;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+  border: none;
+  min-height: 300px;
+}
+
+.vsl-benefits {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.video-placeholder {
+  position: relative;
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.video-placeholder:hover {
+  transform: scale(1.02);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  z-index: 3;
+  box-shadow: 0 10px 30px rgba(27, 74, 153, 0.4);
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 15px 40px rgba(27, 74, 153, 0.6);
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 30px 20px 20px;
+  color: white;
+}
+
+.video-info h3 {
+  font-size: 22px;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.video-info p {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.vsl-benefits h3 {
+  color: var(--accent);
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.benefits-list i {
+  color: #22c55e;
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.btn-vsl {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), #fbbf24);
+  color: #1a1a1a;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.btn-vsl:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.vsl-guarantee {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Ocultar placeholders quando vídeos estão configurados */
+.video-wrapper:has(iframe[src*="youtube.com"]) .video-placeholder,
+.video-wrapper:has(iframe[src*="vimeo.com"]) .video-placeholder {
+  display: none;
+}
+
+.video-wrapper:has(iframe[src*="youtube.com"]) iframe,
+.video-wrapper:has(iframe[src*="vimeo.com"]) iframe {
+  display: block !important;
+}
+
+.video-testimonial-wrapper:has(video[src$=".mp4"]) .testimonial-video-placeholder {
+  display: none;
+}
+
+.video-testimonial-wrapper:has(video[src$=".mp4"]) video {
+  display: block !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .vsl-section {
+    padding: 60px 0;
+  }
+  
+  .vsl-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .vsl-benefits {
+    padding: 20px;
+  }
+  
+  .play-button {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+  
+  .video-info h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  .video-wrapper iframe {
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 480px) {
+  .video-wrapper iframe {
+    border-radius: 8px;
+    aspect-ratio: 16/10; /* Ajuste para telas muito pequenas */
+  }
+}

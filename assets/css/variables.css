@@ -1,13 +1,13 @@
 :root {
-  /* Cores principais - Paleta Rachel Régis */
-  --primary: #D94B87; /* Magenta */
-  --primary-light: #F7DBE7; /* Light Pink */
-  --primary-dark: #B8396E; /* Magenta mais escuro */
-  --secondary: #F7BC6C; /* Gold Yellow */
-  --secondary-light: #FDF2E2; /* Light Yellow */
-  --secondary-dark: #E5A855; /* Gold mais escuro */
+  /* Cores principais - Paleta Professor Guilherme Fonseca */
+  --primary: #1B4A99; /* Azul exato da logo */
+  --primary-light: #E8F1FF; /* Azul claro */
+  --primary-dark: #0F2D5C; /* Azul mais escuro */
+  --secondary: #FFD700; /* Amarelo dourado da logo */
+  --secondary-light: #FFF9E6; /* Amarelo claro */
+  --secondary-dark: #FFB000; /* Amarelo mais escuro */
   --accent: #FFFFFF; /* Pure White */
-  --accent-light: #F7DBE7; /* Light Pink */
+  --accent-light: #E8F1FF; /* Azul claro */
   
   /* Cores de fundo e texto */
   --background: #0f172a;

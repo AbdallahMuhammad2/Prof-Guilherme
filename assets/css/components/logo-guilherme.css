@@ -1,0 +1,71 @@
+/* Filtros e ajustes para a logo do Professor Guilherme */
+.navbar-brand img {
+  /* Ajuste de filtros para transformar a logo nas cores azul e amarelo */
+  filter: 
+    hue-rotate(200deg) 
+    saturate(1.5) 
+    brightness(1.1) 
+    contrast(1.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover img {
+  filter: 
+    hue-rotate(200deg) 
+    saturate(1.8) 
+    brightness(1.3) 
+    contrast(1.3)
+    drop-shadow(0 0 15px rgba(249, 195, 59, 0.6));
+}
+
+/* Caso você queira sobrepor a logo com as cores exatas */
+.navbar-brand::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover::before {
+  opacity: 0.9;
+}
+
+/* Garantir que a imagem fique abaixo da overlay */
+.navbar-brand {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.navbar-brand img {
+  position: relative;
+  z-index: 0;
+}
+
+/* Alternativa: background personalizado para quando a logo for substituída */
+.navbar-brand.guilherme-logo {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand.guilherme-logo::before {
+  content: '🎓';
+  font-size: 1.5rem;
+}

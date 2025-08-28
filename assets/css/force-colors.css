@@ -1,0 +1,67 @@
+/* FORÇA CORES CORRETAS - Professor Guilherme */
+:root {
+  /* CORES EXATAS DA LOGO */
+  --primary: #1B4A99 !important; /* Azul exato da logo */
+  --primary-light: #E8F1FF !important; /* Azul claro */
+  --primary-dark: #0F2D5C !important; /* Azul mais escuro */
+  --secondary: #FFD700 !important; /* Amarelo dourado da logo */
+  --secondary-light: #FFF9E6 !important; /* Amarelo claro */
+  --secondary-dark: #FFB000 !important; /* Amarelo mais escuro */
+}
+
+/* FORÇA CORES NOS PRINCIPAIS ELEMENTOS */
+.btn-glow,
+.card-cta-btn,
+.highlight-btn {
+  background: linear-gradient(135deg, #1B4A99, #FFD700) !important;
+}
+
+.gradient-text,
+.title-highlight,
+.premium-text {
+  background: linear-gradient(135deg, #FFD700, #1B4A99) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+.card-icon {
+  background: linear-gradient(135deg, #1B4A99, #FFD700) !important;
+}
+
+.nav-link:hover,
+.btn-cta:hover {
+  color: #FFD700 !important;
+}
+
+/* Headers e títulos principais */
+.hero-highlight {
+  color: #FFD700 !important;
+}
+
+.section-label {
+  color: #FFD700 !important;
+}
+
+/* Correções de elementos específicos */
+.feature-item i {
+  color: #FFD700 !important;
+}
+
+.achievement-badge .badge-icon {
+  background: linear-gradient(135deg, #1B4A99, #FFD700) !important;
+}
+
+/* Botões e CTAs */
+.card-cta-btn:hover {
+  background: linear-gradient(135deg, #FFD700, #1B4A99) !important;
+}
+
+/* Borda e acentos */
+.premium-card {
+  border: 1px solid rgba(27, 74, 153, 0.2) !important;
+}
+
+.card-glow-effect {
+  background: linear-gradient(135deg, rgba(27, 74, 153, 0.1), rgba(255, 215, 0, 0.1)) !important;
+}

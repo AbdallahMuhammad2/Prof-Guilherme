@@ -18,7 +18,7 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 85% 15%, rgba(217, 75, 135, 0.2), transparent 50%),
+    radial-gradient(circle at 85% 15%, rgba(30, 74, 140, 0.2), transparent 50%),
     radial-gradient(circle at 15% 85%, rgba(236, 72, 153, 0.2), transparent 50%);
   filter: blur(80px);
   opacity: 0.8;
@@ -56,7 +56,7 @@
 #testimonials h2 {
   font-size: 3.5rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #818cf8, #ec4899, #22d3ee);
+  background: linear-gradient(90deg, #818cf8, var(--secondary), #22d3ee);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -79,7 +79,7 @@
   left: 50%;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #818cf8, #ec4899);
+  background: linear-gradient(90deg, #818cf8, var(--secondary));
   transform: translateX(-50%);
   border-radius: 2px;
 }
@@ -168,7 +168,7 @@
 }
 
 .card-back {
-  background: linear-gradient(145deg, rgba(217, 75, 135, 0.8), rgba(236, 72, 153, 0.8));
+  background: linear-gradient(145deg, rgba(30, 74, 140, 0.8), rgba(236, 72, 153, 0.8));
   backdrop-filter: blur(12px);
   transform: rotateY(180deg);
   display: flex;
@@ -200,7 +200,7 @@
   object-fit: cover;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   border: 3px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(145deg, #D94B87, #ec4899) padding-box;
+  background: linear-gradient(145deg, var(--primary), var(--secondary)) padding-box;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -208,7 +208,7 @@
   content: "";
   position: absolute;
   inset: -5px;
-  background: linear-gradient(135deg, #D94B87, #ec4899);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   border-radius: inherit;
   z-index: -1;
   opacity: 0.4;
@@ -283,7 +283,7 @@
   background: linear-gradient(
     135deg,
     transparent 40%,
-    rgba(217, 75, 135, 0.7) 50%,
+    rgba(30, 74, 140, 0.7) 50%,
     transparent 60%
   );
   -webkit-mask: 
@@ -333,7 +333,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #D94B87, #ec4899);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -387,7 +387,7 @@
   left: 0;
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, #D94B87, #ec4899);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   transition: width 0.3s ease;
 }
 
@@ -437,7 +437,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #D94B87, #ec4899);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   filter: blur(1px);
   opacity: 0.6;
   z-index: 1;
@@ -450,6 +450,583 @@
   50% { transform: translate(50px, -100px) rotate(180deg); opacity: 0.6; }
   75% { transform: translate(-50px, -50px) rotate(270deg); opacity: 0.8; }
   100% { transform: translate(0, 0) rotate(360deg); opacity: 0.6; }
+}
+
+/* ===== NOVA SEÇÃO: PRINTS DE WHATSAPP ===== */
+
+/* Grid dos prints de depoimentos */
+.testimonials-prints-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 3;
+}
+
+/* Card individual do print */
+.print-testimonial-card {
+  background: #f8f9fa;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.print-testimonial-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.15),
+    0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Header do WhatsApp */
+.print-header {
+  background: #128C7E;
+  padding: 12px 16px;
+  color: white;
+}
+
+.whatsapp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-details h4 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+  color: white;
+}
+
+.contact-details .status {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.whatsapp-icons {
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.whatsapp-icons i {
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.whatsapp-icons i:hover {
+  opacity: 1;
+}
+
+/* Conteúdo das mensagens */
+.print-content {
+  padding: 20px 16px;
+  background: #ECE5DD;
+  min-height: 280px;
+  position: relative;
+}
+
+.message-bubble {
+  max-width: 85%;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 18px;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-bubble.received {
+  background: white;
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+}
+
+.message-bubble.sent {
+  background: #DCF8C6;
+  margin-left: auto;
+  margin-right: 0;
+  border-bottom-right-radius: 4px;
+}
+
+.message-bubble p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+.message-bubble strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #888;
+  text-align: right;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4px;
+}
+
+.message-reactions {
+  position: absolute;
+  bottom: -8px;
+  right: 10px;
+  background: white;
+  border-radius: 12px;
+  padding: 2px 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-date {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin: 16px 0 8px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Badge de resultado */
+.print-result-badge {
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+
+.print-result-badge.discursiva {
+  background: linear-gradient(135deg, #ff6b6b, #ffa726);
+}
+
+.print-result-badge.aprovado {
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+}
+
+.print-result-badge i {
+  font-size: 14px;
+}
+
+/* Navegação dos prints */
+.prints-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 3;
+}
+
+.prints-counter {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+}
+
+.prints-counter strong {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.verification-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.verification-badge i {
+  color: #4caf50;
+  font-size: 16px;
+}
+
+/* ===== NOVA SEÇÃO: GALERIA DE PRINTS REAIS ===== */
+
+/* Grid da galeria de prints */
+.prints-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 3;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card individual do print */
+.print-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 8px 16px rgba(0, 0, 0, 0.05);
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.print-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Container da imagem do print */
+.print-image-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.print-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.print-card:hover .print-image {
+  transform: scale(1.05);
+}
+
+/* Overlay para zoom */
+.print-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg, 
+    rgba(27, 74, 153, 0.8), 
+    rgba(255, 215, 0, 0.8)
+  );
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.print-card:hover .print-overlay {
+  opacity: 1;
+}
+
+.print-zoom-btn {
+  background: rgba(255, 255, 255, 0.9);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--primary);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.print-overlay:hover .print-zoom-btn {
+  transform: scale(1);
+}
+
+/* Informações do print */
+.print-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.print-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 8px 0;
+}
+
+.print-info p {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 15px 0;
+  line-height: 1.4;
+}
+
+.print-info strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Badges dos resultados */
+.print-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.print-badge.success {
+  background: linear-gradient(135deg, #4caf50, #66bb6a);
+  color: white;
+}
+
+.print-badge.excellent {
+  background: linear-gradient(135deg, #ff6b6b, #ffa726);
+  color: white;
+}
+
+.print-badge.perfect {
+  background: linear-gradient(135deg, #9c27b0, #e91e63);
+  color: white;
+}
+
+.print-badge.future {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+/* Placeholder para novos prints */
+.print-card.placeholder .print-image-container {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-placeholder {
+  text-align: center;
+  color: #666;
+}
+
+.upload-placeholder i {
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.upload-placeholder p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Modal para visualização ampliada */
+.print-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.print-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  z-index: 10000;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Navegação do modal */
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.modal-prev,
+.modal-next {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background 0.3s ease;
+  pointer-events: all;
+}
+
+.modal-prev {
+  margin-left: -70px;
+}
+
+.modal-next {
+  margin-right: -70px;
+}
+
+.modal-prev:hover,
+.modal-next:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Seção de verificação */
+.prints-verification {
+  margin-top: 60px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.verification-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 30px;
+}
+
+.verification-badge i {
+  color: #4caf50;
+  font-size: 18px;
+}
+
+/* Resumo de resultados */
+.results-summary {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.summary-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Responsividade */
@@ -508,7 +1085,9 @@
     line-height: 1.5;
     max-height: 120px;
   }
-}/* Responsividade para Seção de Depoimentos */
+}
+
+/* Responsividade para Seção de Depoimentos */
 @media (max-width: 992px) {
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -574,5 +1153,154 @@
   
   .testimonials-controls {
     bottom: 10px;
+  }
+}
+
+/* Responsividade para prints */
+@media (max-width: 768px) {
+  .testimonials-prints-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .print-testimonial-card {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .contact-details h4 {
+    font-size: 15px;
+  }
+  
+  .message-bubble {
+    max-width: 90%;
+    padding: 8px 12px;
+  }
+  
+  .message-bubble p {
+    font-size: 13px;
+  }
+  
+  .print-content {
+    padding: 16px 12px;
+    min-height: 250px;
+  }
+  
+  .prints-navigation {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .verification-badge {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .print-testimonial-card {
+    border-radius: 15px;
+  }
+  
+  .whatsapp-header {
+    padding: 10px 12px;
+  }
+  
+  .contact-avatar {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .contact-details h4 {
+    font-size: 14px;
+  }
+  
+  .whatsapp-icons {
+    gap: 15px;
+  }
+  
+  .whatsapp-icons i {
+    font-size: 16px;
+  }
+  
+  .print-result-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+    bottom: -10px;
+  }
+}
+
+/* Responsividade para galeria de prints reais */
+@media (max-width: 768px) {
+  .prints-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  
+  .print-image-container {
+    height: 350px;
+  }
+  
+  .print-info {
+    padding: 15px;
+  }
+  
+  .results-summary {
+    gap: 25px;
+  }
+  
+  .summary-number {
+    font-size: 24px;
+  }
+  
+  .modal-prev {
+    margin-left: -10px;
+  }
+  
+  .modal-next {
+    margin-right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .print-card {
+    border-radius: 15px;
+  }
+  
+  .print-image-container {
+    height: 300px;
+  }
+  
+  .print-info h4 {
+    font-size: 16px;
+  }
+  
+  .print-info p {
+    font-size: 13px;
+  }
+  
+  .print-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  .verification-badge {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .results-summary {
+    gap: 20px;
+  }
+  
+  .summary-number {
+    font-size: 20px;
+  }
+  
+  .summary-label {
+    font-size: 12px;
   }
 }

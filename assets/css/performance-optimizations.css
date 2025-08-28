@@ -81,7 +81,7 @@ body {
 .animated-gradients::after,
 .course-card-premium::before,
 .course-card-premium::after {
-  background: rgba(217, 75, 135, 0.1) !important;
+  background: rgba(30, 74, 140, 0.1) !important;
   filter: none !important;
 }
 

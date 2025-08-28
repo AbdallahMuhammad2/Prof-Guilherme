@@ -1,4 +1,4 @@
-/* filepath: /c:/Users/abdal/OneDrive/Documentos/GitHub/professor-alan/assets/js/components/navbar.js */
+/* filepath: /c:/Users/abdal/OneDrive/Documentos/GitHub/professor-guilherme/assets/js/components/navbar.js */
 
 // Gerencia comportamento da navbar
 document.addEventListener('DOMContentLoaded', function() {

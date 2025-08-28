@@ -1,4 +1,4 @@
-/* filepath: /c:/Users/abdal/OneDrive/Documentos/GitHub/professor-alan/assets/js/components/animations.js */
+/* filepath: /c:/Users/abdal/OneDrive/Documentos/GitHub/professor-guilherme/assets/js/components/animations.js */
 
 document.addEventListener('DOMContentLoaded', function() {
     // Inicializar AOS (Animate On Scroll)

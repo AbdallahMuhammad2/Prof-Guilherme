@@ -1,6 +1,6 @@
 :root {
-    --primary: #6C63FF;
-    --secondary: #FF6584;
+    --primary: var(--primary);
+    --secondary: var(--secondary);
     --background: #121212;
     --text-light: #f0f0f0;
     --text-dark: #333333;
@@ -36,7 +36,7 @@ body {
 --transition-speed: 0.3s;
 --navbar-height: 70px;
 --shadow-dark: rgba(0, 0, 0, 0.3);
---secondary: #e05574; /* Example secondary color */
+--secondary: var(--secondary); /* Example secondary color */
 --text-light: #ffffff;
 --btn-shadow: rgba(224, 85, 116, 0.4);
 --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -151,7 +151,7 @@ body {
 }
 
 .navbar .btn-cta:hover {
-    background: #d94a63; /* Cor ligeiramente mais escura para melhor efeito */
+    background: var(--secondary); /* Cor ligeiramente mais escura para melhor efeito */
     transform: translateY(-4px);
     box-shadow: 0 8px 25px var(--btn-shadow);
 }
@@ -498,7 +498,7 @@ font-size: 0.95rem;
 }
 
 .back-to-top:hover {
-    background: #e05574;
+    background: var(--secondary);
     transform: scale(1.1);
 }
 
@@ -678,7 +678,7 @@ font-size: 0.95rem;
 }
 
 .old-price {
-    color: #ff0000;
+    color: var(--secondary);
     text-decoration: line-through;
     margin-right: 10px;
     font-size: 1rem;
@@ -1364,7 +1364,7 @@ font-size: 0.95rem;
         #youtube p {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #ffccc7;
+            color: var(--secondary-light);
         }
 
         #youtube .btn {
@@ -1512,7 +1512,7 @@ transform: translate(-50%, -50%) scale(1);
 }
 
 .cta .btn:hover {
-background: #e05574; /* Cor de destaque no hover */
+background: var(--secondary); /* Cor de destaque no hover */
 color: #fff;
 box-shadow: 0 0 20px var(--secondary);
 transform: translateY(-3px);
@@ -1641,7 +1641,7 @@ footer a:hover {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #e05574;
+    background: var(--secondary);
 }
 
 ::selection {

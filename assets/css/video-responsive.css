@@ -1,0 +1,92 @@
+/* ===== CSS RESPONSIVO PARA VÍDEOS ===== */
+
+/* Centralização forçada para vídeo de depoimento */
+.video-testimonial-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.video-testimonial-wrapper {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Centralização e layout responsivo */
+.vsl-container,
+.video-testimonial-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.video-wrapper,
+.video-testimonial-wrapper {
+  box-sizing: border-box;
+}
+
+/* Media queries específicas para vídeos */
+@media (max-width: 1200px) {
+  .video-wrapper {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+  
+  .video-testimonial-wrapper {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+  
+  .vsl-benefits {
+    margin: 0 10px;
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .video-wrapper iframe {
+    min-height: 250px;
+    border-radius: 12px;
+  }
+  
+  .video-testimonial-wrapper video {
+    min-height: 200px;
+    border-radius: 12px;
+  }
+  
+  .video-testimonial-container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-wrapper {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .video-testimonial-wrapper {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .vsl-benefits {
+    padding: 25px 20px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-wrapper iframe {
+    min-height: 200px;
+    border-radius: 8px;
+  }
+  
+  .video-testimonial-wrapper video {
+    min-height: 180px;
+    border-radius: 8px;
+  }
+  
+  .vsl-benefits {
+    padding: 20px 15px;
+  }
+}

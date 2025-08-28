@@ -23,7 +23,7 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(ellipse at 20% 20%, rgba(217, 75, 135, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse at 20% 20%, rgba(30, 74, 140, 0.12) 0%, transparent 70%),
     radial-gradient(ellipse at 80% 80%, rgba(247, 188, 108, 0.12) 0%, transparent 70%);
   opacity: 0;
   animation: fadeInBg 2s ease-out forwards;
@@ -50,7 +50,7 @@
   right: -10%;
   width: 60%;
   height: 90%;
-  background: radial-gradient(ellipse at top right, rgba(217, 75, 135, 0.18), transparent 70%);
+  background: radial-gradient(ellipse at top right, rgba(30, 74, 140, 0.18), transparent 70%);
   transform: rotate(-15deg);
   filter: blur(20px);
   /* animação removida para performance */
@@ -221,10 +221,10 @@
   z-index: -1;
   background: linear-gradient(
     135deg,
-    rgba(217, 75, 135, 0.2),
-    rgba(217, 75, 135, 0.3),
+    rgba(30, 74, 140, 0.2),
+    rgba(30, 74, 140, 0.3),
     rgba(247, 188, 108, 0.3),
-    rgba(217, 75, 135, 0.2)
+    rgba(30, 74, 140, 0.2)
   );
   background-size: 400% 400%;
   filter: blur(20px);
@@ -446,13 +446,13 @@
   justify-content: center;
   border-radius: 12px;
   margin-right: 12px;
-  background: linear-gradient(135deg, #D94B87 0%, #F7BC6C 100%);
-  box-shadow: 0 5px 15px rgba(217, 75, 135, 0.5);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  box-shadow: 0 5px 15px rgba(30, 74, 140, 0.5);
 }
 
 .badge-icon.award {
-  background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
-  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.5);
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  box-shadow: 0 5px 15px rgba(249, 195, 59, 0.5);
 }
 
 .badge-icon i {
@@ -544,7 +544,7 @@
   left: 5%;
   width: 2px;
   height: 80px;
-  background: linear-gradient(to bottom, #D94B87, transparent);
+  background: linear-gradient(to bottom, var(--primary), transparent);
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeInLine 1.5s ease forwards 1.2s;
@@ -563,7 +563,7 @@
   font-size: 0.95rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #D94B87;
+  color: var(--secondary);
   margin-bottom: 25px;
   padding-bottom: 10px;
   position: relative;
@@ -579,7 +579,7 @@
   left: 0;
   width: 40px;
   height: 3px;
-  background: linear-gradient(90deg, #D94B87, rgba(217, 75, 135, 0.2));
+  background: linear-gradient(90deg, var(--secondary), rgba(249, 195, 59, 0.2));
   border-radius: 3px;
 }
 
@@ -618,7 +618,7 @@
 
 /* Destaque de texto aprimorado */
 .about-heading h2 .highlight {
-  color: #D94B87;
+  color: var(--secondary);
   position: relative;
   display: inline-block;
   z-index: 1;
@@ -631,7 +631,7 @@
   right: -3px;
   bottom: 5px;
   height: 12px;
-  background: rgba(217, 75, 135, 0.25);
+  background: rgba(30, 74, 140, 0.25);
   z-index: -1;
   border-radius: 10px;
   transform: rotate(-1deg);
@@ -640,7 +640,7 @@
 
 .about-heading:hover h2 .highlight::after {
   height: 15px;
-  background: rgba(217, 75, 135, 0.35);
+  background: rgba(30, 74, 140, 0.35);
   bottom: 3px;
 }
 
@@ -688,10 +688,10 @@
   position: absolute;
   inset: 0;
   border-radius: 20px;
-  background: rgba(217, 75, 135, 0.15);
+  background: rgba(30, 74, 140, 0.15);
   transform: rotate(45deg);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 5px 20px rgba(217, 75, 135, 0.2);
+  box-shadow: 0 5px 20px rgba(30, 74, 140, 0.2);
 }
 
 .expertise-icon::after {
@@ -711,14 +711,14 @@
 
 .expertise-item:hover .expertise-icon-bg {
   transform: rotate(45deg) scale(1.1);
-  background: rgba(217, 75, 135, 0.25);
-  box-shadow: 0 10px 30px rgba(217, 75, 135, 0.3);
+  background: rgba(30, 74, 140, 0.25);
+  box-shadow: 0 10px 30px rgba(30, 74, 140, 0.3);
 }
 
 .expertise-icon i {
   position: relative;
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #D94B87 0%, #F7BC6C 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -783,7 +783,7 @@
   box-shadow: 
     0 30px 60px rgba(0, 0, 0, 0.35),
     0 15px 30px rgba(0, 0, 0, 0.2);
-  border-color: rgba(217, 75, 135, 0.2);
+  border-color: rgba(30, 74, 140, 0.2);
 }
 
 /* Ícone das estatísticas */
@@ -801,11 +801,11 @@
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  background: rgba(217, 75, 135, 0.15);
+  background: rgba(30, 74, 140, 0.15);
   transform: rotate(45deg);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 
-    0 5px 15px rgba(217, 75, 135, 0.2),
+    0 5px 15px rgba(30, 74, 140, 0.2),
     0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -816,7 +816,7 @@
   border-radius: 15px;
   background: linear-gradient(
     135deg, 
-    rgba(217, 75, 135, 0.3),
+    rgba(30, 74, 140, 0.3),
     rgba(139, 92, 246, 0.2)
   );
   transform: rotate(45deg);
@@ -827,26 +827,26 @@
 
 .stat-item:hover .stat-icon-bg {
   transform: rotate(45deg) scale(1.1);
-  background: rgba(217, 75, 135, 0.25);
+  background: rgba(30, 74, 140, 0.25);
   box-shadow: 
-    0 10px 30px rgba(217, 75, 135, 0.3),
+    0 10px 30px rgba(30, 74, 140, 0.3),
     0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .stat-icon i {
   font-size: 1.8rem;
   transform: rotate(-45deg);
-  background-image: linear-gradient(135deg, #D94B87, #F7BC6C);
+  background-image: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   transition: all 0.4s ease;
-  filter: drop-shadow(0 2px 4px rgba(217, 75, 135, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(30, 74, 140, 0.3));
 }
 
 .stat-item:hover .stat-icon i {
   transform: rotate(-45deg) scale(1.2);
-  filter: drop-shadow(0 3px 6px rgba(217, 75, 135, 0.5));
+  filter: drop-shadow(0 3px 6px rgba(30, 74, 140, 0.5));
 }
 
 /* Número da estatística - ESTÁTICO */
@@ -874,7 +874,7 @@
 
 .stat-item:hover .stat-number {
   transform: translateY(-5px);
-  text-shadow: 0 5px 20px rgba(217, 75, 135, 0.5);
+  text-shadow: 0 5px 20px rgba(30, 74, 140, 0.5);
 }
 
 /* Descrição da estatística */
@@ -928,14 +928,14 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #fff;
-  background: linear-gradient(135deg, #D94B87 0%, #F7BC6C 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   border: none;
   border-radius: 50px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   box-shadow: 
-    0 10px 30px rgba(217, 75, 135, 0.4),
+    0 10px 30px rgba(30, 74, 140, 0.4),
     0 5px 15px rgba(0, 0, 0, 0.2),
     inset 0 2px 0 rgba(255, 255, 255, 0.1);
   z-index: 1;
@@ -945,7 +945,7 @@
 .btn-about:hover {
   transform: translateY(-5px);
   box-shadow: 
-    0 20px 40px rgba(217, 75, 135, 0.5),
+    0 20px 40px rgba(30, 74, 140, 0.5),
     0 10px 20px rgba(0, 0, 0, 0.3),
     inset 0 2px 0 rgba(255, 255, 255, 0.1);
 }
@@ -953,7 +953,7 @@
 .btn-about:active {
   transform: translateY(-2px);
   box-shadow: 
-    0 10px 25px rgba(217, 75, 135, 0.4),
+    0 10px 25px rgba(30, 74, 140, 0.4),
     0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -1016,19 +1016,19 @@
 /* Versão alternativa do botão */
 .btn-about.alt {
   background: transparent;
-  border: 2px solid rgba(217, 75, 135, 0.6);
+  border: 2px solid rgba(30, 74, 140, 0.6);
   color: #a5b4fc;
   box-shadow: 
-    0 10px 30px rgba(217, 75, 135, 0.2),
+    0 10px 30px rgba(30, 74, 140, 0.2),
     0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-about.alt:hover {
-  border-color: rgba(217, 75, 135, 1);
+  border-color: rgba(30, 74, 140, 1);
   color: #fff;
-  background: rgba(217, 75, 135, 0.2);
+  background: rgba(30, 74, 140, 0.2);
   box-shadow: 
-    0 15px 35px rgba(217, 75, 135, 0.3),
+    0 15px 35px rgba(30, 74, 140, 0.3),
     0 8px 20px rgba(0, 0, 0, 0.15);
 }
 

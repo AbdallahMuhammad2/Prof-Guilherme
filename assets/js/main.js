@@ -1,4 +1,4 @@
-/* filepath: /c:/Users/abdal/OneDrive/Documentos/GitHub/professor-alan/assets/js/main.js */
+/* filepath: /c:/Users/abdal/OneDrive/Documentos/GitHub/professor-guilherme/assets/js/main.js */
 document.addEventListener('DOMContentLoaded', function () {
     // Iniciar AOS
     AOS.init({

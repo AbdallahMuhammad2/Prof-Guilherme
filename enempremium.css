@@ -2,7 +2,7 @@
 /* Variáveis de Cores Atualizadas */
 :root {
     --primary-color: #6C63FF;
-    --secondary-color: #FF6584;
+    --secondary-color: var(--secondary);
     --background-color: #121212;
     --text-light: #f0f0f0;
     --text-dark: #333333;

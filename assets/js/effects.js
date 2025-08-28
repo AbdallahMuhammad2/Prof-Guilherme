@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     aboutHeader.classList.add("about-header");
     
     aboutHeader.innerHTML = `
-        <h2>Sobre o Professor Alan Soares</h2>
+        <h2>Sobre o Professor guilherme Soares</h2>
         <p>Domine disciplinas exatas com aulas práticas e conteúdo completo!</p>
     `;
     
