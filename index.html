@@ -63,6 +63,9 @@
   
   <!-- Performance Optimizations -->
   <link rel="stylesheet" href="assets/css/performance-optimizations.css">
+  
+  <!-- CORREÇÃO DEFINITIVA HERO MOBILE - FORÇA MÁXIMA -->
+  <link rel="stylesheet" href="assets/css/hero-mobile-final.css">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" crossorigin="anonymous"
@@ -73,6 +76,96 @@
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"
     referrerpolicy="no-referrer" defer></script>
+
+  <!-- CSS INLINE DE FORÇA MÁXIMA PARA HERO MOBILE -->
+  <style>
+    @media screen and (max-width: 768px) {
+      /* FORÇA BRUTAL - SOBRESCREVE TUDO */
+      .hero-section, #home.hero-section, header#home.hero-section {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 100vw !important;
+        margin: 0 !important;
+        padding: 120px 0 40px !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        overflow-x: hidden !important;
+        display: block !important;
+        background: linear-gradient(145deg, #0b1121, #1d293d) !important;
+      }
+      
+      .hero-inner {
+        width: 100vw !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 10px !important;
+        display: block !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        flex: none !important;
+        justify-content: initial !important;
+      }
+      
+      .hero-content {
+        width: 100vw !important;
+        max-width: none !important;
+        margin: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 30px 15px !important;
+        position: relative !important;
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        text-align: center !important;
+        display: block !important;
+        flex: none !important;
+        background: rgba(11, 17, 33, 0.9) !important;
+        border-radius: 0 !important;
+        backdrop-filter: blur(20px) !important;
+        border: none !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+      }
+      
+      .hero-title {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+        text-align: center !important;
+        margin: 0 0 20px 0 !important;
+        width: 100% !important;
+      }
+      
+      .hero-description {
+        font-size: 16px !important;
+        text-align: center !important;
+        margin: 0 0 30px 0 !important;
+        width: 100% !important;
+      }
+      
+      .hero-ctas {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 0 30px 0 !important;
+      }
+      
+      .btn-primary-hero, .btn-secondary-hero {
+        width: 100% !important;
+        max-width: 280px !important;
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+      
+      .hero-image, .professor-container {
+        display: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -1203,6 +1296,78 @@
   <script src="assets/js/main.js" defer></script>
   <script src="assets/js/prints-gallery.js" defer></script>
   <script src="assets/js/video-sections.js" defer></script>
+
+  <!-- SCRIPT DE FORÇA MÁXIMA PARA HERO MOBILE -->
+  <script>
+    // Força a correção do hero em mobile
+    function forceHeroMobileFix() {
+      if (window.innerWidth <= 768) {
+        const heroSection = document.querySelector('.hero-section');
+        const heroInner = document.querySelector('.hero-inner');
+        const heroContent = document.querySelector('.hero-content');
+        
+        if (heroSection) {
+          heroSection.style.setProperty('width', '100vw', 'important');
+          heroSection.style.setProperty('max-width', '100vw', 'important');
+          heroSection.style.setProperty('margin', '0', 'important');
+          heroSection.style.setProperty('left', '0', 'important');
+          heroSection.style.setProperty('right', '0', 'important');
+          heroSection.style.setProperty('transform', 'none', 'important');
+          heroSection.style.setProperty('position', 'relative', 'important');
+          heroSection.style.setProperty('overflow-x', 'hidden', 'important');
+          heroSection.style.setProperty('display', 'block', 'important');
+        }
+        
+        if (heroInner) {
+          heroInner.style.setProperty('width', '100vw', 'important');
+          heroInner.style.setProperty('max-width', 'none', 'important');
+          heroInner.style.setProperty('margin', '0', 'important');
+          heroInner.style.setProperty('padding', '0 10px', 'important');
+          heroInner.style.setProperty('left', '0', 'important');
+          heroInner.style.setProperty('right', '0', 'important');
+          heroInner.style.setProperty('transform', 'none', 'important');
+          heroInner.style.setProperty('display', 'block', 'important');
+          heroInner.style.setProperty('flex', 'none', 'important');
+        }
+        
+        if (heroContent) {
+          heroContent.style.setProperty('width', '100vw', 'important');
+          heroContent.style.setProperty('max-width', 'none', 'important');
+          heroContent.style.setProperty('margin', '0', 'important');
+          heroContent.style.setProperty('margin-left', '0', 'important');
+          heroContent.style.setProperty('margin-right', '0', 'important');
+          heroContent.style.setProperty('padding', '30px 15px', 'important');
+          heroContent.style.setProperty('left', '0', 'important');
+          heroContent.style.setProperty('right', '0', 'important');
+          heroContent.style.setProperty('transform', 'none', 'important');
+          heroContent.style.setProperty('text-align', 'center', 'important');
+          heroContent.style.setProperty('display', 'block', 'important');
+          heroContent.style.setProperty('flex', 'none', 'important');
+          heroContent.style.setProperty('border-radius', '0', 'important');
+          heroContent.style.setProperty('border', 'none', 'important');
+        }
+        
+        // Remove imagem do professor em mobile
+        const heroImage = document.querySelector('.hero-image');
+        if (heroImage) {
+          heroImage.style.setProperty('display', 'none', 'important');
+        }
+      }
+    }
+    
+    // Executa imediatamente
+    forceHeroMobileFix();
+    
+    // Executa após o DOM carregar
+    document.addEventListener('DOMContentLoaded', forceHeroMobileFix);
+    
+    // Executa após resize da janela
+    window.addEventListener('resize', forceHeroMobileFix);
+    
+    // Executa após um delay para garantir que todos os CSS carregaram
+    setTimeout(forceHeroMobileFix, 500);
+    setTimeout(forceHeroMobileFix, 1000);
+  </script>
 </body>
 
 </html>
